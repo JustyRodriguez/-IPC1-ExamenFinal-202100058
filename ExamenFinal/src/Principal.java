@@ -10,6 +10,7 @@ public class Principal {
         int respuesta=0;
         while(respuesta!=4){
         Scanner entrada= new Scanner(System.in);
+        //menú del programa
         System.out.println("++++++++++++++++++++++");
         System.out.println("+  Menú de Opciones  +");
         System.out.println("+  1. Problema 1     +");
@@ -19,6 +20,7 @@ public class Principal {
         System.out.println("++++++++++++++++++++++");
         respuesta=entrada.nextInt();
         
+        //switch para las opciones
         switch(respuesta){
             case 1:
                 System.out.println("Este es el problema 1");
@@ -29,6 +31,7 @@ public class Principal {
                 num1=numero.nextInt();
                 System.out.println("Porfavor ingrese el segundo número");
                 num2=numero.nextInt();
+                //comparación de los números mediante if
                 if (num1>num2){
                 System.out.println("El número mayor es: "+num1);
                 }
@@ -41,6 +44,7 @@ public class Principal {
                 Scanner leer = new Scanner(System.in);
                 System.out.print("Introduzca numero de filas: ");
                 int piramide=leer.nextInt();
+                //ciclo while para obligar a pedir un número impar
                 while(piramide%2==0){
                 System.out.println("Porfavor ingresa un número impar");
                 piramide=leer.nextInt();
@@ -48,6 +52,7 @@ public class Principal {
                 }
                 int signo=1;
                 int espacios=(piramide/2)+2;
+                //ciclos for para la creación de las pirámides
                 for(int i=0; i<=(piramide/2)+2; i++){
                 espacios--;
                 for(int j=0; j<=espacios; j++){
